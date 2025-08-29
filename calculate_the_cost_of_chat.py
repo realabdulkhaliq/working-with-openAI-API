@@ -8,7 +8,8 @@ A car is a vehicle that is typically powered by an internal combustion engine or
 response = client.chat.completions.create(
     model="gpt-4o-mini",
     messages=[{"role": "user", "content": prompt}],
-    max_completion_tokens=max_completion_tokens
+    # max_completion_tokens=max_completion_tokens
+    max_tokens=max_completion_tokens
 )
 
 input_token_price = 0.15 / 1_000_000
